@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*con*/
+.flash1{ margin:10px 0; width:1000px; height:90px;}
+.shipin_cen{ width:270px;}
+.shipin2{ width:720px; height:420px;}
+.shipin_cen{ width:270px;}
+.shipin_cen .gg1 img{ width:270px; height:105px;}
+.shipin_cen p.title{ margin:8px 0; line-height:20px;}
+.shipin_cen p.title span{ font-size:14px; border-left:5px solid #f30; padding-left:12px;}
+.shipin_cen p.title a{ color:#bbb;}
+.shipin_cen p.title a:hover{ text-decoration:underline; color:#fa0;}
+.shipin_cen ul li{ line-height:22px;}
+.shipin_cen ol li{ line-height:22px; list-style:decimal inside; color:#f30;}
+.shipin_cen ol li a{ color:#f60;}
+.shipin_cen ol li a:hover{ text-decoration:underline;}
+
+.shipin_cen .box{ width:121px; margin:3px 6px;}
+.shipin_cen .box img{ width:120px; height:90px; border:1px solid #ddd;}
+.shipin_cen p.cas{ height:32px; line-height:16px; overflow:hidden; margin-top:5px;}
+
+.tbg3{ position:relative;}
+.tbg3 p{ position:absolute; left:800px; top:20px; color:#81BAD0; font-size:32px;}
+.gbs_about span{ width:455px; margin:10px 0 0;}
+.gbs_about p{ width:510px; margin:20px 10px 10px; line-height:24px; text-indent:24px;}
+
+.service p{ padding:15px 10px; line-height:26px;}
+.service dl{ padding:0 12px;}

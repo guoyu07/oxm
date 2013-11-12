@@ -91,12 +91,7 @@ if(!defined('InEmpireCMS'))
     <div class="shipin2 ft"></div>
     
     <div class="shipin_cen rt">
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
-        <div class="box ft"><a><img src="/oxm/public/images/box1.jpg" /><p class="cas">打包机使用教程</p></a></div>
+        <? @sys_GetEcmsInfo(0,6,32,0,3,14,0);?>
     </div>
     <div class="both"></div>
 
@@ -110,9 +105,7 @@ if(!defined('InEmpireCMS'))
     <div class="gbs_pro_list ft">
         <div class="list-title">产品分类</div>
         <ul>
-          <li><a href="">打包机</a></li>
-          <li><a href="">封箱机</a></li>
-          <li><a href="">喷码机</a></li>
+          <? @sys_ShowClassByTemp(2,15,0,0);?>
         </ul>
     </div>
     <div class="gbs_pro_show rt"><!--产品展示两排-->

@@ -47,6 +47,8 @@ a,a:hover{ text-decoration:none;}
 .gbs_pro_show .show-title a{ line-height:32px; color:#ffd57c;}
 .gbs_pro_show .show-box{ line-height:28px; padding:20px;}
 
+.productimg {width:150px;height:150px}
+
 /**翻页**/
 .text-box{ margin:10px 10px 0;}
 .text-box a{ border:1px solid #aaa; padding:3px 8px; margin:0 2px; height:24px; line-height:24px;}

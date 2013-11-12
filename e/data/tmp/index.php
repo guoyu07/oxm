@@ -9,7 +9,7 @@ if(!defined('InEmpireCMS'))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>网站首页</title>
 <link href="/oxm/public/css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="/oxm/public/css/index.css" rel="stylesheet" type="text/css" />
 <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
 </head>
 
@@ -23,7 +23,7 @@ if(!defined('InEmpireCMS'))
         </div>
         <div class="nav">
             <ul>
-            <li><a href="">首页</a></li>
+           
            <? @sys_ShowClassByTemp('0',13,0,0);?>
             </ul>
         </div>

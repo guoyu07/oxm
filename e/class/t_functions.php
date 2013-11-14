@@ -1135,6 +1135,7 @@ function sys_GetSitelink($line,$num,$enews=0,$classid=0,$stats=0){
 	$sql=$empire->query("select * from {$dbtbpre}enewslink where checked=1".$a.$whereclass." order by myorder,lid limit ".$num);
 	//输出
 	$i=0;
+	$linkstr = "";
 	while($r=$empire->fetch($sql))
 	{
 		//链接
@@ -1159,10 +1160,14 @@ function sys_GetSitelink($line,$num,$enews=0,$classid=0,$stats=0){
 		{
 			$logo="<a href='".$linkurl."' target=".$r[target]."><img src='".$r[lpic]."' alt='".$r[lname]."' border=0 width='".$r[width]."' height='".$r[height]."'></a>";
 		}
-		$class_text.="<td align=center>".$logo."</td>";
+
+		$linkstr .= $logo;
+		// assnr 修改  注释
+		// $class_text.=$logo;
+		// $class_text.="<td align=center>".$logo."</td>";
 		//分割
-		if($i%$line==0)
-		{$class_text.="</tr>";}
+		// if($i%$line==0)
+		// {$class_text.="</tr>";}
 	}
 	if($i<>0)
 	{
@@ -1180,7 +1185,8 @@ function sys_GetSitelink($line,$num,$enews=0,$classid=0,$stats=0){
 		}
 	}
 	$text=$table.$class_text.$table1;
-    echo"$text";
+    // echo"$text";
+    echo $linkstr;
 }
 
 //引用文件

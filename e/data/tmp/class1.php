@@ -32,11 +32,9 @@ if(!defined('InEmpireCMS'))
     </div>
     <div class="con-box">
       <div class="gbs_pro_list ft">
-        <div class="list-title">产品分类</div>
+        <div class="list-title">关于我们</div>
         <ul>
-          <li><a href="">打包机</a></li>
-          <li><a href="">封箱机</a></li>
-          <li><a href="">喷码机</a></li>
+         <? @sys_ShowClassByTemp(1,16,0,0);?>
         </ul>
       </div>
       <div class="gbs_pro_show rt">

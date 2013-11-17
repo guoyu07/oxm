@@ -606,8 +606,9 @@ function ReplaceEcmsinfoClassname($temp,$enews,$classid){
 
 //带模板的标签
 function sys_GetEcmsInfo($classid,$line,$strlen,$have_class=0,$enews=0,$tempid,$doing=0,$ewhere='',$eorder=''){
-	global $empire,$public_r;
+	global $empire,$public_r,$dbtbpre;
 	$sql=sys_ReturnBqQuery($classid,$line,$enews,$doing,$ewhere,$eorder);
+
 	if(!$sql)
 	{return "";}
 	//取得模板
@@ -635,8 +636,19 @@ function sys_GetEcmsInfo($classid,$line,$strlen,$have_class=0,$enews=0,$tempid,$
 	while($r=$empire->fetch($sql))
 	{
 		$r[oldtitle]=$r[title];
+
+		// assnr 增加downpath 2013-11-17
+		if (preg_match("/\[\!--downpath--\]/", $listvar)) {
+			$getDownPathQuery = $empire->query1('select downpath from ' . $dbtbpre . 'ecms_download_data_1' . ' where id = \'' . $r['id'] . '\' limit 1');
+			if ($downpath = $empire->fetch($getDownPathQuery)) {
+				$pathArr = explode('::::::', $downpath['downpath']);
+				$downpath = $pathArr[1];
+				$tempListvar = str_replace('[!--downpath--]', $downpath, $listvar);
+			}
+		}
+
 		//替换列表变量
-		$repvar=ReplaceListVars($no,$listvar,$subnews,$strlen,$formatdate,$url,$have_class,$r,$ret_r,$docode);
+		$repvar=ReplaceListVars($no,$tempListvar,$subnews,$strlen,$formatdate,$url,$have_class,$r,$ret_r,$docode);
 		$listtext=str_replace("<!--list.var".$changerow."-->",$repvar,$listtext);
 		$changerow+=1;
 		//超过行数

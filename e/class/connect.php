@@ -2285,6 +2285,9 @@ function ReplaceListVars($no,$listtemp,$subnews,$subtitle,$formatdate,$url,$have
 	$listtemp=str_replace('[!--onclick--]',$r[onclick],$listtemp);
 	$listtemp=str_replace('[!--oldtitle--]',$r[oldtitle],$listtemp);
 	$listtemp=str_replace('[!--totaldown--]',$r[totaldown],$listtemp);
+
+	
+		
 	//栏目链接
 	if(strstr($ylisttemp,'[!--this.classlink--]'))
 	{

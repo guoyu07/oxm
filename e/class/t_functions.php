@@ -617,7 +617,7 @@ function sys_GetEcmsInfo($classid,$line,$strlen,$have_class=0,$enews=0,$tempid,$
 	{return "";}
 	$listtemp=str_replace('[!--news.url--]',$public_r[newsurl],$tr[temptext]);
 	$subnews=$tr[subnews];
-	$listvar=str_replace('[!--news.url--]',$public_r[newsurl],$tr[listvar]);
+	$listvar = $tempListvar = str_replace('[!--news.url--]',$public_r[newsurl],$tr[listvar]);
 	$rownum=$tr[rownum];
 	$formatdate=$tr[showdate];
 	$docode=$tr[docode];

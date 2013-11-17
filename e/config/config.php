@@ -436,7 +436,7 @@ $emod_r[2]=Array('mid'=>2,
 'qeditdofunf'=>'||',
 'definfovoteid'=>0,
 'orderf'=>'',
-'sonclass'=>'|38|39|40|41|',
+'sonclass'=>'|6|16|',
 'tid'=>2,
 'tbname'=>'download');
 $emod_r[3]=Array('mid'=>3,

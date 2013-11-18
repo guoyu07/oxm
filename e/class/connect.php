@@ -1584,6 +1584,10 @@ function sys_ReturnBqClassname($r,$have_class=0){
 		elseif($class_r[$r[classid]][classurl])
 		{
 			$classurl=$class_r[$r[classid]][classurl];
+			// assnr add 2013-11-18
+			if (!preg_match("/http/", $classurl)) {
+				$classurl = $public_r['newsurl'] . $classurl;
+			}
 		}
 		else
 		{

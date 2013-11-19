@@ -52,7 +52,9 @@ a,a:hover{ text-decoration:none;}
 /**翻页**/
 .text-box{ margin:10px 10px 0;}
 .text-box a{ border:1px solid #aaa; padding:3px 8px; margin:0 2px; height:24px; line-height:24px;}
+.text-box span{ border:1px solid #aaa; padding:3px 8px; margin:0 2px; height:24px; line-height:24px;}
 .text-box a.text-bg{ background-color:#f87b00; color:#fff;}
+.text-box span.current{ background-color:#f87b00; color:#fff;}
 
 /*bottom*/
 .footer{ background:url(../../public/images/footbg.jpg);}

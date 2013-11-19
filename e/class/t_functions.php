@@ -550,7 +550,18 @@ function sys_ReturnBqQuery($classid,$line,$enews=0,$do=0,$ewhere='',$eorder=''){
 	}
 	//排序
 	$addorder=empty($eorder)?$order.' desc':$eorder;
-	$query='select '.ReturnSqlListF($mid).' from '.$dbtbpre.'ecms_'.$tbname.$query.' order by '.ReturnSetTopSql('bq').$addorder.' limit '.$line;
+	/**----------- assnr add 2013-11-19 添加分页--------------*/
+	$count_query='select count(*) as nums from ' . $dbtbpre . 'ecms_' . $tbname . $query;
+	$sql = $empire->query1($count_query);
+	$ret = $empire->fetch($sql);
+	require_once(ECMS_PATH.'ext/Page.class.php');
+	$assnr_page = new Page($ret['nums'], $line);
+	$page = $assnr_page->show();
+	$GLOBALS['page'] = $page;
+	$limit = ' limit ' . $assnr_page->firstRow . ',' . $assnr_page ->listRows;
+	/**------------page end-------------*/
+	
+	$query = 'select '. ReturnSqlListF($mid) . ' from ' . $dbtbpre . 'ecms_' . $tbname . $query . ' order by ' . ReturnSetTopSql('bq') . $addorder . $limit;
 	$sql=$empire->query1($query);
 	if(!$sql)
 	{
@@ -606,7 +617,8 @@ function ReplaceEcmsinfoClassname($temp,$enews,$classid){
 
 //带模板的标签
 function sys_GetEcmsInfo($classid,$line,$strlen,$have_class=0,$enews=0,$tempid,$doing=0,$ewhere='',$eorder=''){
-	global $empire,$public_r,$dbtbpre;
+	// assnr add $page 2013-11-19
+	global $empire, $public_r, $dbtbpre, $page;
 	$sql=sys_ReturnBqQuery($classid,$line,$enews,$doing,$ewhere,$eorder);
 
 	if(!$sql)
@@ -615,7 +627,8 @@ function sys_GetEcmsInfo($classid,$line,$strlen,$have_class=0,$enews=0,$tempid,$
 	$tr=sys_ReturnBqTemp($tempid);
 	if(empty($tr['tempid']))
 	{return "";}
-	$listtemp=str_replace('[!--news.url--]',$public_r[newsurl],$tr[temptext]);
+	// assnr modify 2013-11-19
+	$listtemp = str_replace(array('[!--news.url--]', '[!--page--]'), array($public_r[newsurl], $page), $tr[temptext]);
 	$subnews=$tr[subnews];
 	$listvar = $tempListvar = str_replace('[!--news.url--]',$public_r[newsurl],$tr[listvar]);
 	$rownum=$tr[rownum];

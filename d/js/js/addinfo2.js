@@ -1,1 +1,1 @@
-document.write("<option value=\'6\' style=\'background:#99C4E3\'>|-下载中心</option><option value=\'16\' style=\'background:#99C4E3\'>|-testDown</option>");
+document.write("<option value=\'6\' style=\'background:#99C4E3\'>|-下载中心</option>");

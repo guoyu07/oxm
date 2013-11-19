@@ -31,7 +31,9 @@ if(!defined('InEmpireCMS'))
 <!--con-->
 <div class="content">
     <div class="banners"><img src="/oxm/public/images/banners.jpg" width="1000" height="370" /></div>
-    <div class="flash1"><img src="/oxm/public/images/tbg1.jpg" /></div>
+    <div class="flash1">
+<? @sys_GetAd(1);?>
+</div>
     <div class="shipin2 ft">
       <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="720" height="420" id="FLVPlayer">
         <param name="movie" value="FLVPlayer_Progressive.swf" />

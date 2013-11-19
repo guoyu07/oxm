@@ -1,0 +1,1 @@
+document.write("<a href='http://www.assnr.com' target=_blank><img src='/oxm/d/file/p/2013-11-19/4fffe31f2383523f409f577ea29b815d.jpg' border=0 width='1000' height='90' alt=''></a>");

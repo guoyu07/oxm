@@ -85,7 +85,7 @@ $class_r[6]=Array('classid'=>6,
 
 'down_num'=>2,
 'online_num'=>2,
-'islist'=>2,
+'islist'=>2,'listdt'=>1,
 'tid'=>2,
 'tbname'=>'download',
 'modid'=>2,
@@ -98,7 +98,7 @@ $class_r[6]=Array('classid'=>6,
 
 'checked'=>1,
 'bname'=>'下载中心',
-
+'showdt'=>1,
 'reorder'=>'newstime DESC',
 'dtlisttempid'=>9);
 $class_r[7]=Array('classid'=>7,
@@ -236,30 +236,4 @@ $class_r[15]=Array('classid'=>15,
 'tid'=>1,
 'tbname'=>'news',
 'modid'=>1);
-$class_r[16]=Array('classid'=>16,
-'bclassid'=>0,
-'classname'=>'testDown',
-'sonclass'=>'',
-'featherclass'=>'',
-'islast'=>1,
-'classpath'=>'testDown',
-'classtype'=>'.html',
-
-'down_num'=>2,
-'online_num'=>2,
-'islist'=>2,
-'tid'=>2,
-'tbname'=>'download',
-'modid'=>2,
-'lencord'=>25,'link_num'=>10,
-'newstempid'=>0,
-'listtempid'=>0,
-'newspath'=>'Y-m-d',
-'filetype'=>'.html',
-
-
-'checked'=>1,
-'bname'=>'testDown',
-
-'reorder'=>'newstime DESC');
 ?>

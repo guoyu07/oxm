@@ -1777,6 +1777,10 @@ function sys_GetShowClassMore($bclassid,$bcr,$tr,$bno,$bnum,$show=0){
 	{
 		$string.=$listtext;
     }
+	// assnr add 2013-11-20
+	if (!$string) {
+		$string = $listtext;
+	}
     $string=$list_r[0].$string.$list_r[2];
 	echo $string;
 }

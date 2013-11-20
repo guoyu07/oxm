@@ -14,35 +14,47 @@ if(!defined('InEmpireCMS'))
 <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
 </head>
 
-<body style="background:url([!--news.url--]public/images/bodybg1.jpg) no-repeat;"><div id="contact" class="wrap"> 
+<body style="background:url([!--news.url--]public/images/bodybg1.jpg) no-repeat;">
+ <div id="sitemaps" class="wrap"> 
   <!--top-->
   <div class="header">
     <div class="top"> <span class="logo ft"><a href="" title=""><img src="../public/images/hdlogo.png" /></a></span> <span class="tel ft"><img src="../public/images/rttel.png" /></span> </div>
     <div class="nav">
       <ul>
-       <? @sys_ShowClassByTemp('0',13,0,0);?>
+        <li><a href="">首页</a></li>
+        <li><a href="">关于华大</a></li>
+        <li><a href="">产品中心</a></li>
+        <li><a href="">工程案例</a></li>
+        <li><a href="">招商加盟</a></li>
+        <li><a href="">新闻动态</a></li>
+        <li><a href="">下载中心</a></li>
+        <li><a href="">联系我们</a></li>
       </ul>
     </div>
   </div>
   <!--con-->
   <div class="content">
     <div class="flash3">这里是3张轮播图</div>
-    <div class="position">
-      <h3>您现在的位置：<a href="http://www.scjzfjt.com/">成都华大包装机械有限公司</a>&nbsp;>&nbsp;联系我们</h3>
-    </div>
+    <div class="position"><h3>您现在的位置：<a href="http://www.scjzfjt.com/">成都华大包装机械有限公司</a>&nbsp;>&nbsp;网站地图</h3></div>
     <div class="con-box">
       <div class="gbs_pro_list ft">
         <div class="list-title">产品分类</div>
         <ul>
-          <li><a href="">打包机</a></li>
-          <li><a href="">封箱机</a></li>
-          <li><a href="">喷码机</a></li>
+          <li>打包机</li>
+          <li>封箱机</li>
+          <li>喷码机</li>
         </ul>
       </div>
-      <div class="gbs_pro_show rt">
-      	<div class="show-box">
-[!--pagetext--]
-</div>
+      <div class="gbs_pro_show rt"><!--产品展示两排-->
+        <div class="page_content">
+          <h2><a href="http://www.scjzfjt.com/">四川正方高压线缆有限公司</a></h2>
+
+<? @sys_ForShowSonClass('0',18,0,0);?>
+          
+            
+          
+      <div class="both"></div>
+        </div>
       </div>
       <div class="both"></div>
     </div>

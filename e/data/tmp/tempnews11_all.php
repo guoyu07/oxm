@@ -78,8 +78,63 @@ if(!defined('InEmpireCMS'))
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
 </div>
 </div>
+
+
+<script src="/oxm/public/js/jquery-2.0.3.min.js"></script>
+<script src="/oxm/public/js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="/oxm/ck/ckplayer/ckplayer.js" charset="utf-8"></script>
+
 <script type="text/javascript">
-swfobject.registerObject("FLVPlayer");
+
+
+$(function() {
+  $('.flash3').slidesjs({
+    width: 1000,
+    height: 200,
+    navigation: false,
+    play: {
+        active: false,
+            // [boolean] Generate the play and stop buttons.
+            // You cannot use your own buttons. Sorry.
+            effect: "slide",
+            // [string] Can be either "slide" or "fade".
+            interval: 5000,
+            // [number] Time spent on each slide in milliseconds.
+            auto: true,
+            // [boolean] Start playing the slideshow on load.
+            swap: false,
+            // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+            // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+            // [number] restart delay on inactive slideshow
+        }
+    });
+});
+
+
 </script>
+
+
+
+<script type="text/javascript">
+    var flashvars={
+        f:'http://www.ziyiliyi.com/test.flv',
+        c:0,
+        b:1
+        };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+    CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
+    /*
+    CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+    下面三行是调用html5播放器用到的
+    */
+    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+    var support=['iPad','iPhone','ios','android+false','msie10+false'];
+    CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
+  </script>
+
+
+
 </body>
 </html>

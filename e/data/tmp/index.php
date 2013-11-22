@@ -36,12 +36,15 @@ if(!defined('InEmpireCMS'))
 <? @sys_GetAd(1);?>
 </div>
     <div class="shipin2 ft" id="video">
- 
+        <div id="a1">
+        </div>
           
     </div>
 
     <div class="shipin_cen rt">
-    <div class="gg1"><a href=""><img src="/oxm/public/images/ggbg1.png" alt="这里是图片广告" /></a></div>
+    <div class="gg1">
+<? @sys_GetAd(4);?>
+</div>
         <p class="title"><span>联系方式</span></p>
         <ul class="about-text">
             <li>地址：成都市金牛区金府路金府银座</li>
@@ -66,13 +69,15 @@ if(!defined('InEmpireCMS'))
     </div>
     <div class="both"></div>
 
-    <div class="flash3">这里是轮播图</div>
+    <div class="flash3"><? @sys_GetEcmsInfo(0,10,32,0,3,23,0);?></div>
     <div class="tbg3"><img src="/oxm/public/images/tbg3.jpg" width="980" height="65" /><p>028-68869691</p></div>
     <div class="gbs_about">
         <span class="ft"><img src="/oxm/public/images/gbs_about_img.jpg" /></span>
         <p class="rt">成都华大包装机械有限公司创立于1999年，长期秉持、专业、技术、诚信之企业精神服务于客户。公司主要经营产品有：打包机、自动封箱机、喷码机、真空包装机、热收缩机、裹膜机、收缩机以及自动包装流水线；提供全自动套膜热收缩包装机；自动胶带封箱机；激光喷码机系列；全自动真空包装机组；在线式全自动铝箔封口机 能够自动计量（计数）包装、开箱、装箱、封箱、捆扎、码垛的标准包装生产流水线；以及各类包装机械及耗材配件，公司产品广泛应用到医药、医疗器械、食品、日化、化工、汽车零部件、印刷等行业。公司目前在售所有产品均符合ISO9001：2000国际质量体系认证要求，部分产品远销欧洲、美洲、中 东、东南亚等地区。</p><div class="both"></div>
     </div>
-        <div class="flash1"><img src="/oxm/public/images/tbg6.jpg" /></div>
+        <div class="flash1">
+<? @sys_GetAd(2);?>
+</div>
     <div class="gbs_pro_list ft">
         <div class="list-title">产品分类</div>
         <ul>
@@ -87,7 +92,10 @@ if(!defined('InEmpireCMS'))
       </div>
     </div>
 <div class="both"></div>
-    <div class="flash1" style="margin:10px 0 0;"><img src="/oxm/public/images/tbg4.jpg" /></div>
+    <div class="flash1" style="margin:10px 0 0;">
+
+<? @sys_GetAd(3);?>
+</div>
     
     <div class="gbs_rongyu">
     <div><img src="/oxm/public/images/tbg5.jpg" width="1000" height="70" /></div>
@@ -166,7 +174,7 @@ if(!defined('InEmpireCMS'))
 <div class="footer">
 <div class="footbox">
     <div class="link"><strong>友情链接：</strong><? @sys_GetSitelink(6,12,0,0,0);?></div>
-    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href=""/oxm/contactus.html.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a><a href="sitemaps.html">友情链接</a></div>
+    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href="/oxm/contactus.html.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a><a href="sitemaps.html">友情链接</a></div>
         <p>成都华大包装机械&nbsp;版权所有&nbsp;&nbsp;蜀ICP备12003754号</p>
         <p>联系电话：028-68869692 / 028-68869691&nbsp; &nbsp;传真：028-68869691</p>
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
@@ -212,21 +220,25 @@ $(function() {
 
 
 <script type="text/javascript">
-    var flashvars={
-        f:'http://www.ziyiliyi.com/test.flv',
-        c:0,
-        b:1
-        };
-    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
-    CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
-    /*
-    CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
-    下面三行是调用html5播放器用到的
-    */
-    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
-    var support=['iPad','iPhone','ios','android+false','msie10+false'];
-    CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
-  </script>
+	var flashvars={
+			f:'http://www.ziyiliyi.com/1_0.flv',
+			c:0,
+			b:1,
+                        h:'4'
+		};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+	CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
+	/*
+	CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+	下面三行是调用html5播放器用到的
+	*/
+	var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];
+	CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
+
+
+
+</script>
 
 
 

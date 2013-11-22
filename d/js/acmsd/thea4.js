@@ -1,0 +1,1 @@
+document.write("<a href='/oxm/e/public/ClickAd?adid=4' target=_blank><img src='/oxm/d/file/p/2013-11-23/ca91c2557355d67243c96e1d7be54b62.png' border=0 width='270' height='105' alt=''></a>");

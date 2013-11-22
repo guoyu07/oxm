@@ -332,6 +332,8 @@ function TranFile($file,$file_name,$file_type,$file_size,$tranurl,$no,$classid,$
 		$tranfrom==0?printerror("TranPHP","history.go(-1)",8):ECMS_EditorPrintError(1,'','','TranPHP','','');
 	}
 	$type_r=explode("|".$filetype."|",$public_r['filetype']);
+	// assnr add comment 2013 11 23
+	/*
 	if(count($type_r)<2)
 	{
 		$tranfrom==0?printerror("TranFiletypeFail","history.go(-1)",8):ECMS_EditorPrintError(1,'','','TranFiletypeFail','','');
@@ -340,6 +342,7 @@ function TranFile($file,$file_name,$file_type,$file_size,$tranurl,$no,$classid,$
 	{
 		$tranfrom==0?printerror("TranFilesizeFail","history.go(-1)",8):ECMS_EditorPrintError(1,'','','TranFilesizeFail','','');
 	}
+	*/
 	if($type==1)//上传图片
 	{
 		if(!strstr($ecms_config['sets']['tranpicturetype'],','.$filetype.','))

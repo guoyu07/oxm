@@ -35,37 +35,9 @@ if(!defined('InEmpireCMS'))
     <div class="flash1">
 <? @sys_GetAd(1);?>
 </div>
-    <div class="shipin2 ft">
-      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="720" height="420" id="FLVPlayer">
-        <param name="movie" value="FLVPlayer_Progressive.swf" />
-        <param name="quality" value="high" />
-        <param name="wmode" value="opaque" />
-        <param name="scale" value="noscale" />
-        <param name="salign" value="lt" />
-        <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=/oxm/public/images/%E8%BF%87%E8%BD%BD%E6%80%A7%E8%83%BD%E8%AF%95%E9%AA%8C&amp;autoPlay=true&amp;autoRewind=false" />
-        <param name="swfversion" value="8,0,0,0" />
-        <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
-        <param name="expressinstall" value="../Scripts/expressInstall.swf" />
-        <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
-        <!--[if !IE]>-->
-        <object type="application/x-shockwave-flash" data="FLVPlayer_Progressive.swf" width="720" height="420">
-          <!--<![endif]-->
-          <param name="quality" value="high" />
-          <param name="wmode" value="opaque" />
-          <param name="scale" value="noscale" />
-          <param name="salign" value="lt" />
-          <param name="FlashVars" value="&amp;MM_ComponentVersion=1&amp;skinName=Clear_Skin_1&amp;streamName=/oxm/public/images/%E8%BF%87%E8%BD%BD%E6%80%A7%E8%83%BD%E8%AF%95%E9%AA%8C&amp;autoPlay=true&amp;autoRewind=false" />
-          <param name="swfversion" value="8,0,0,0" />
-          <param name="expressinstall" value="../Scripts/expressInstall.swf" />
-          <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
-          <div>
-            <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
-            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" /></a></p>
-          </div>
-          <!--[if !IE]>-->
-        </object>
-        <!--<![endif]-->
-      </object>
+    <div class="shipin2 ft" id="video">
+ 
+          
     </div>
 
     <div class="shipin_cen rt">
@@ -81,11 +53,7 @@ if(!defined('InEmpireCMS'))
         </ul>
         <p class="title"><span>新闻动态</span><a class="rt" href="">更多>></a></p>
         <ol>
-            <li><a href="">链接到新闻详细页……</a></li>
-            <li><a href="">链接到新闻详细页</a></li>
-          <li><a href="">链接到新闻详细页……</a></li>
-            <li><a href="">链接到新闻详细页</a></li>
-            <li><a href="">链接到新闻详细页……</a></li>
+            <? @sys_GetEcmsInfo(5,6,32,0,0,21,0);?>
         </ol>
   </div>
 <div class="both"></div>
@@ -114,26 +82,8 @@ if(!defined('InEmpireCMS'))
     <div class="gbs_pro_show rt"><!--产品展示两排-->
         <div class="show-title">产品展示<span>Products</span><a class="rt" href="">more>></a></div>
         <div class="list-box ft">
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif" /></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
+           
+           <? @sys_GetEcmsInfo(2,8,32,0,0,22,0);?>
       </div>
     </div>
 <div class="both"></div>
@@ -222,8 +172,63 @@ if(!defined('InEmpireCMS'))
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
 </div>
 </div>
+
+
+<script src="/oxm/public/js/jquery-2.0.3.min.js"></script>
+<script src="/oxm/public/js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="/oxm/ck/ckplayer/ckplayer.js" charset="utf-8"></script>
+
 <script type="text/javascript">
-swfobject.registerObject("FLVPlayer");
+
+
+$(function() {
+  $('.flash3').slidesjs({
+    width: 1000,
+    height: 200,
+    navigation: false,
+    play: {
+        active: false,
+            // [boolean] Generate the play and stop buttons.
+            // You cannot use your own buttons. Sorry.
+            effect: "slide",
+            // [string] Can be either "slide" or "fade".
+            interval: 5000,
+            // [number] Time spent on each slide in milliseconds.
+            auto: true,
+            // [boolean] Start playing the slideshow on load.
+            swap: false,
+            // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+            // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+            // [number] restart delay on inactive slideshow
+        }
+    });
+});
+
+
 </script>
+
+
+
+<script type="text/javascript">
+    var flashvars={
+        f:'http://www.ziyiliyi.com/test.flv',
+        c:0,
+        b:1
+        };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+    CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
+    /*
+    CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+    下面三行是调用html5播放器用到的
+    */
+    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+    var support=['iPad','iPhone','ios','android+false','msie10+false'];
+    CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
+  </script>
+
+
+
 </body>
 </html>

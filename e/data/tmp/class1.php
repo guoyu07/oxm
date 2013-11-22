@@ -27,7 +27,12 @@ if(!defined('InEmpireCMS'))
   </div>
   <!--con-->
   <div class="content">
-    <div class="flash3">这里是3张轮播图</div>
+    <div class="flash3">
+<a href="http://www.assnr.com"><img src="/oxm/public/images/example-slide-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/"></a>
+      <a><img src="/oxm/public/images/example-slide-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/"></a>
+      <a><img src="/oxm/public/images/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/"></a>
+      <a><img src="/oxm/public/images/example-slide-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/"></a>
+</div>
     <div class="position">
       <h3>您现在的位置：<a href="http://www.scjzfjt.com/">成都华大包装机械有限公司</a>&nbsp;>&nbsp;关于华大</h3>
     </div>
@@ -54,8 +59,40 @@ if(!defined('InEmpireCMS'))
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
 </div>
 </div>
+
+
+<script src="/oxm/public/js/jquery-2.0.3.min.js"></script>
+<script src="/oxm/public/js/jquery.slides.min.js"></script>
 <script type="text/javascript">
-swfobject.registerObject("FLVPlayer");
+
+
+$(function() {
+  $('.flash3').slidesjs({
+    width: 1000,
+    height: 200,
+    navigation: false,
+    play: {
+        active: false,
+            // [boolean] Generate the play and stop buttons.
+            // You cannot use your own buttons. Sorry.
+            effect: "slide",
+            // [string] Can be either "slide" or "fade".
+            interval: 5000,
+            // [number] Time spent on each slide in milliseconds.
+            auto: true,
+            // [boolean] Start playing the slideshow on load.
+            swap: false,
+            // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+            // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+            // [number] restart delay on inactive slideshow
+        }
+    });
+});
+
+
+
 </script>
 </body>
 </html>

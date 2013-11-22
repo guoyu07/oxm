@@ -41,33 +41,10 @@ if(!defined('InEmpireCMS'))
           <li><a href="">喷码机</a></li>
                 </ul>
             </div>
-            <div class="gbs_pro_show rt"><!--产品展示两排-->
-                <div class="show-title">产品展示<span>Products</span><a class="rt" href="">more>></a></div>
-                <div class="list-box ft">
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="images/t1.gif" /></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                <div class="both"></div>
-              </div>
-            <div class="text-box rt"><a href="">首页</a><a class="text-bg" href="">1</a><a href="">2</a><a href="">3</a><a href="">末页</a></div>
-                <div class="both"></div>
+            <div class="gbs_pro_show rt">
+           <!--产品展示两排-->
+              <? @sys_GetEcmsInfo(2,8,32,0,0,20,0);?>
+            
             </div>
             <div class="both"></div>
         </div>

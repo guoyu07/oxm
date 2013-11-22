@@ -40,17 +40,13 @@ if(!defined('InEmpireCMS'))
         </ul>
       </div>
       <div class="gbs_pro_show rt">
-      	<div class="show-box"><!--新闻列表每页10条-->
-            <ul>
-                <li><a href="">热收缩机成为环保的包装^设备…………</a><span class="rt">[2013-9-9]</span></li>
-                <li><a href="">热收缩机成为环保的包装设备</a><span class="rt">[2013-9-9]</span></li>
-                <li><a href="">热收缩机成为环保的包装设备</a><span class="rt">[2013-9-9]</span></li>
-                <li><a href="">热收缩机成为环保的包装设备</a><span class="rt">[2013-9-9]</span></li>
-                <li><a href="">热收缩机成为环保的包装设备</a><span class="rt">[2013-9-9]</span></li>
-                <li><a href="">热收缩机成为环保的包装设备</a><span class="rt">[2013-9-9]</span></li>
-            </ul>
-            <div class="text-box rt"><a href="">首页</a><a class="text-bg" href="">1</a><a href="">2</a><a href="">3</a><a href="">末页</a></div>
-                <div class="both"></div>
+      	<div class="show-box">
+        <!--新闻列表每页10条-->
+            
+                <? @sys_GetEcmsInfo(0,10,32,0,3,19,0);?>
+                
+           
+               
         </div>
       </div>
       <div class="both"></div>

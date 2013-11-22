@@ -79,8 +79,40 @@ if(!defined('InEmpireCMS'))
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
 </div>
 </div>
+
+
+<script src="/oxm/public/js/jquery-2.0.3.min.js"></script>
+<script src="/oxm/public/js/jquery.slides.min.js"></script>
 <script type="text/javascript">
-swfobject.registerObject("FLVPlayer");
+
+
+$(function() {
+  $('.flash3').slidesjs({
+    width: 1000,
+    height: 200,
+    navigation: false,
+    play: {
+        active: false,
+            // [boolean] Generate the play and stop buttons.
+            // You cannot use your own buttons. Sorry.
+            effect: "slide",
+            // [string] Can be either "slide" or "fade".
+            interval: 5000,
+            // [number] Time spent on each slide in milliseconds.
+            auto: true,
+            // [boolean] Start playing the slideshow on load.
+            swap: false,
+            // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+            // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+            // [number] restart delay on inactive slideshow
+        }
+    });
+});
+
+
+
 </script>
 </body>
 </html>

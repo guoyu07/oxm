@@ -18,17 +18,10 @@ if(!defined('InEmpireCMS'))
 <div id="environment" class="wrap"> 
   <!--top-->
   <div class="header">
-    <div class="top"> <span class="logo ft"><a href="" title=""><img src="../public/images/hdlogo.png" /></a></span> <span class="tel ft"><img src="../public/images/rttel.png" /></span> </div>
+   <? @sys_GetEcmsInfo(0,10,32,0,3,24,0);?>
     <div class="nav">
       <ul>
-        <li><a href="">首页</a></li>
-        <li><a href="">关于华大</a></li>
-        <li><a href="">产品中心</a></li>
-        <li><a href="">工程案例</a></li>
-        <li><a href="">招商加盟</a></li>
-        <li><a href="">新闻动态</a></li>
-        <li><a href="">下载中心</a></li>
-        <li><a href="">联系我们</a></li>
+         <? @sys_ShowClassByTemp('0',13,0,0);?>
       </ul>
     </div>
   </div>
@@ -40,42 +33,16 @@ if(!defined('InEmpireCMS'))
     </div>
     <div class="con-box">
       <div class="gbs_pro_list ft">
-        <div class="list-title">关于我们</div>
+        <div class="list-title">生产环境</div>
         <ul>
-          <li><a href="">公司简介</a></li>
-          <li><a href="">总裁致词</a></li>
-          <li><a href="">组织机构</a></li>
-          <li><a href="">生产环境</a></li>
-          <li><a href="">荣誉证书</a></li>
+          <? @sys_ShowClassByTemp(1,16,0,0);?>
         </ul>
       </div>
       <div class="gbs_pro_show rt"><!--产品展示两排-->
         <div class="show-title">生产环境<span>Production&nbsp;environment</span></div>
         <div class="list-box ft">
-          <dl>
-            <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-            <dd><a href="">生产环境</a></dd>
-          </dl>
-          <dl>
-            <dt><a href=""><img alt="" title="" src="images/t1.gif" /></a></dt>
-            <dd><a href="">生产环境</a></dd>
-          </dl>
-          <dl>
-            <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-            <dd><a href="">生产环境</a></dd>
-          </dl>
-          <dl>
-            <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-            <dd><a href="">生产环境</a></dd>
-          </dl>
-          <dl>
-            <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>
-            <dd><a href="">生产环境</a></dd>
-          </dl>
-          <div class="both"></div>
-        </div>
-        <div class="text-box rt"><a href="">首页</a><a class="text-bg" href="">1</a><a href="">2</a><a href="">3</a><a href="">末页</a></div>
-        <div class="both"></div>
+         <? @sys_GetEcmsInfo('selfinfo',8,32,0,0,25,0);?>
+         
       </div>
       <div class="both"></div>
     </div>

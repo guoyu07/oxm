@@ -18,7 +18,7 @@ if(!defined('InEmpireCMS'))
 <div id="aboutus" class="wrap"> 
   <!--top-->
   <div class="header">
-    <div class="top"> <span class="logo ft"><a href="" title=""><img src="../public/images/hdlogo.png" /></a></span> <span class="tel ft"><img src="../public/images/rttel.png" /></span> </div>
+       <? @sys_GetEcmsInfo(0,10,32,0,3,24,0);?>
     <div class="nav">
       <ul>
        <? @sys_ShowClassByTemp('0',13,0,0);?>
@@ -27,9 +27,9 @@ if(!defined('InEmpireCMS'))
   </div>
   <!--con-->
   <div class="content">
-    <div class="flash3">这里是3张轮播图</div>
+    <div class="flash3"><? @sys_GetEcmsInfo(0,10,32,0,3,23,0);?></div>
     <div class="position">
-      <h3>您现在的位置：<a href="http://www.scjzfjt.com/">成都华大包装机械有限公司</a>&nbsp;>&nbsp;关于华大</h3>
+      <h3>您现在的位置：<a href="http://www.scjzfjt.com/">成都华大包装机械有限公司</a>&nbsp;>&nbsp;<?=$class_r[$ecms_gr[classid]][classname]?></h3>
     </div>
     <div class="con-box">
       <div class="gbs_pro_list ft">
@@ -72,7 +72,7 @@ if(!defined('InEmpireCMS'))
 <div class="footer">
 <div class="footbox">
     <div class="link"><strong>友情链接：</strong><? @sys_GetSitelink(6,12,0,0,0);?></div>
-    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href=""/oxm/contactus.html.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a><a href="sitemaps.html">友情链接</a></div>
+    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href="/oxm/custom/contactus.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a></div>
         <p>成都华大包装机械&nbsp;版权所有&nbsp;&nbsp;蜀ICP备12003754号</p>
         <p>联系电话：028-68869692 / 028-68869691&nbsp; &nbsp;传真：028-68869691</p>
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
@@ -118,21 +118,25 @@ $(function() {
 
 
 <script type="text/javascript">
-    var flashvars={
-        f:'http://www.ziyiliyi.com/test.flv',
-        c:0,
-        b:1
-        };
-    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
-    CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
-    /*
-    CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
-    下面三行是调用html5播放器用到的
-    */
-    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
-    var support=['iPad','iPhone','ios','android+false','msie10+false'];
-    CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
-  </script>
+	var flashvars={
+			f:'http://www.ziyiliyi.com/1_0.flv',
+			c:0,
+			b:1,
+                        h:'4'
+		};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+	CKobject.embedSWF('/oxm/ck/ckplayer/ckplayer.swf','a1','ckplayer_a1','720','420',flashvars,params);
+	/*
+	CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+	下面三行是调用html5播放器用到的
+	*/
+	var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];
+	CKobject.embedHTML5('video','ckplayer_a1',720,420,video,flashvars,support);
+
+
+
+</script>
 
 
 

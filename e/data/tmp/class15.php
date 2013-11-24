@@ -18,7 +18,7 @@ if(!defined('InEmpireCMS'))
 <div id="honor" class="wrap"> 
   <!--top-->
   <div class="header">
-    <div class="top"> <span class="logo ft"><a href="" title=""><img src="../public/images/hdlogo.png" /></a></span> <span class="tel ft"><img src="../public/images/rttel.png" /></span> </div>
+     <? @sys_GetEcmsInfo(0,10,32,0,3,24,0);?>
     <div class="nav">
       <ul>
         <? @sys_ShowClassByTemp('0',13,0,0);?>
@@ -33,13 +33,13 @@ if(!defined('InEmpireCMS'))
     </div>
     <div class="con-box">
       <div class="gbs_pro_list ft">
-        <div class="list-title">关于我们</div>
+        <div class="list-title">荣誉证书</div>
         <ul>
         <? @sys_ShowClassByTemp(1,16,0,0);?>
         </ul>
       </div>
       <div class="gbs_pro_show rt"><!--产品展示两排-->
-        <div class="show-title">荣誉资质<span>Certificate&nbsp;of&nbsp;honor</span></div>
+        <div class="show-title">荣誉证书<span>Certificate&nbsp;of&nbsp;honor</span></div>
         <div class="list-box ft">
           <dl>
             <dt><a href=""><img alt="" title="" src="images/t1.gif"></a></dt>

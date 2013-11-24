@@ -11,7 +11,6 @@ if(!defined('InEmpireCMS'))
 <link href="/oxm/public/css/common.css" rel="stylesheet" type="text/css" />
 <link href="/oxm/public/css/index.css" rel="stylesheet" type="text/css" />
 <link href="/oxm/public/css/sitemaps.css" rel="stylesheet" type="text/css" />
-<script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
 </head>
 
 <body style="background:url(/oxm/public/images/bodybg1.jpg) no-repeat;">
@@ -54,7 +53,7 @@ if(!defined('InEmpireCMS'))
             <li>售后：张经理（12345678901）</li>
             <li>技术：张经理（12345678901）</li>
         </ul>
-        <p class="title"><span>新闻动态</span><a class="rt" href="">更多>></a></p>
+        <p class="title"><span>新闻动态</span><a class="rt" href="/oxm/xinwendongtai/">更多>></a></p>
         <ol>
             <? @sys_GetEcmsInfo(5,6,32,0,0,21,0);?>
         </ol>
@@ -62,7 +61,9 @@ if(!defined('InEmpireCMS'))
 <div class="both"></div>
 
     <div class="flash1"><img src="/oxm/public/images/tbg1.jpg" /></div>
-    <div class="shipin2 ft"></div>
+    <div class="shipin2 ft" id="video2">
+        <a href="javascript:void()" onClick="offBanner('video2','XNjMxNjIzMjQ0',720,420)"><img src="http://hgw072098.chinaw3.com/UploadFiles/shiping/shiping002.jpg" border="0" width="719" height="423" ></a>
+   </div>
     
     <div class="shipin_cen rt">
         <? @sys_GetEcmsInfo(0,6,32,0,3,14,0);?>
@@ -107,29 +108,7 @@ if(!defined('InEmpireCMS'))
                     <div id="ISL_Cont" class="Cont">
                         <div class="ScrCont">
                             <div id="List1" class="ft"> 
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif" /></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-             </div>
-                        <div id="List2" class="ft">
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
-             
-            <dl>
-                <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                <dd><a href="">国家专利证书</a></dd>
-            </dl>
+            <? @sys_GetEcmsInfo(15,8,32,0,0,22,0);?>
              </div>
             <div class="both"></div>
                         </div>
@@ -142,28 +121,9 @@ if(!defined('InEmpireCMS'))
             <div class="service">
                 <div class="service-title"><a title="技术服务" href=""><img src="/oxm/public/images/service-title.jpg" /></div>
                 <p>公司目前在售所有产品均符合ISO9001：2000国际质量体系认证要求，部分产品远销欧洲、美洲、中 东、东南亚等地区。 公司十余年以"专注包装应用，衷心服务客户"为宗旨，视产品质量重于生命，立公司信誉为根本，以创造一流包装机械品牌、西南地区优秀包装设备供应商为目标，为广大新客户提供更高效优质的便捷服务。华大包装立志与国内外客户在未来的长路上携手共进，共创包装行业的辉煌明天！</p>
-                <div class="list-box">
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif" /></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href=""><img alt="" title="" src="/oxm/public/images/t1.gif"></a></dt>
-                        <dd><a href="">国家专利证书</a></dd>
-                    </dl>
-                    <div class="both"></div>
+                <!--<div class="list-box">
+                    <? @sys_GetEcmsInfo(2,8,32,0,0,22,0);?>
+                    <div class="both"></div>-->
                 </div>
             </div>
 
@@ -174,7 +134,7 @@ if(!defined('InEmpireCMS'))
 <div class="footer">
 <div class="footbox">
     <div class="link"><strong>友情链接：</strong><? @sys_GetSitelink(6,12,0,0,0);?></div>
-    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href="/oxm/contactus.html.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a><a href="sitemaps.html">友情链接</a></div>
+    <div class="foot-tit"><a href="/oxm/">首页</a><a href="/oxm/guanyuhuada/">关于华大</a><a href="/oxm/chanpinzhongxin/">产品中心</a><a href="/oxm/custom/contactus.html">联系我们</a><a href="/oxm/sitemap.html">网站地图</a></div>
         <p>成都华大包装机械&nbsp;版权所有&nbsp;&nbsp;蜀ICP备12003754号</p>
         <p>联系电话：028-68869692 / 028-68869691&nbsp; &nbsp;传真：028-68869691</p>
         <p>地 址：成都市金牛区金府路555号万贯C区超市2楼4、5号&nbsp;&nbsp;技术支持：<a href="http://www.soyiwl.com">成都搜易网络科技有限公司</a></p>
@@ -239,8 +199,16 @@ $(function() {
 
 
 </script>
+<script>
+function offBanner(vID,vurl,vwidth,vheight){
 
+var vparam='winType=adshow&amp;VideoIDS='+vurl+'&amp;isAutoPlay=true&amp;isShowRelatedVideo=false';
+var vsrc='http://static.youku.com/v/swf/qplayer.swf?' + vparam;
 
+o=" <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0' width="+vwidth+" height="+vheight+"><param name='movie' value='"+vsrc+"' /><param name='wmode' value='transparent' /><param name='quality' value='high' /><param name='wmode' value='Opaque' />" + '<embed type="application/x-shockwave-flash" src="'+vsrc+'" d="movie_player" name="movie_player" bgcolor="#000000"   quality="high" allowfullscreen="true" flashvars="'+vparam+'" pluginspage="http://www.macromedia.com/go/getflashplayer"  wmode="Opaque"  height="'+vheight+'" width="'+vwidth+'"></embed>    </object>';
+document.getElementById(vID).innerHTML=o;
+}
 
+</script>
 </body>
 </html>

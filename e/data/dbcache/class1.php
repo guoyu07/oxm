@@ -2,7 +2,7 @@
 $class_r[1]=Array('classid'=>1,
 'bclassid'=>0,
 'classname'=>'关于华大',
-'sonclass'=>'|',
+'sonclass'=>'|14|15|',
 'featherclass'=>'',
 'islast'=>0,
 'classpath'=>'guanyuhuada',
@@ -160,8 +160,8 @@ $class_r[8]=Array('classid'=>8,
 'tbname'=>'news',
 'modid'=>1,
 'lencord'=>25,'link_num'=>10,
-'newstempid'=>0,
-'listtempid'=>0,
+'newstempid'=>11,
+'listtempid'=>11,
 'newspath'=>'Y-m-d',
 'filetype'=>'.html',
 
@@ -169,22 +169,27 @@ $class_r[8]=Array('classid'=>8,
 'checked'=>1,
 'bname'=>'打包机',
 
-'reorder'=>'newstime DESC');
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>11);
 $class_r[9]=Array('classid'=>9,
 'bclassid'=>2,
 'classname'=>'封箱机',
 'sonclass'=>'|',
 'featherclass'=>'|2|',
 'islast'=>0,
-'classpath'=>'chanpinzhongxin/fengxiangji',
+'classpath'=>'chanpinzhongxin/fengxiangji','searchtempid'=>1,
 'classtype'=>'.html',
 
 'down_num'=>2,
 'online_num'=>2,
-'islist'=>2,
+'islist'=>1,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,
+'reorder'=>'newstime DESC',
+'listtempid'=>11,
+'dtlisttempid'=>11);
 $class_r[10]=Array('classid'=>10,
 'bclassid'=>2,
 'classname'=>'喷码机',
@@ -250,7 +255,7 @@ $class_r[14]=Array('classid'=>14,
 'classname'=>'生产环境',
 'sonclass'=>'|',
 'featherclass'=>'|1|',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'guanyuhuada/shengchanhuanjing',
 'classtype'=>'.html',
 
@@ -259,13 +264,25 @@ $class_r[14]=Array('classid'=>14,
 'islist'=>2,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>11,
+'listtempid'=>12,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'生产环境',
+
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>12);
 $class_r[15]=Array('classid'=>15,
 'bclassid'=>1,
 'classname'=>'荣誉证书',
 'sonclass'=>'|',
 'featherclass'=>'|1|',
-'islast'=>0,
+'islast'=>1,
 'classpath'=>'guanyuhuada/rongyuzhengshu',
 'classtype'=>'.html',
 
@@ -274,5 +291,17 @@ $class_r[15]=Array('classid'=>15,
 'islist'=>2,
 'tid'=>1,
 'tbname'=>'news',
-'modid'=>1);
+'modid'=>1,
+'lencord'=>25,'link_num'=>10,
+'newstempid'=>11,
+'listtempid'=>13,
+'newspath'=>'Y-m-d',
+'filetype'=>'.html',
+
+
+'checked'=>1,
+'bname'=>'荣誉证书',
+
+'reorder'=>'newstime DESC',
+'dtlisttempid'=>13);
 ?>
